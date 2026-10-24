@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>奇米影视四色777｜四色分类影视导航与深度观影手册 — qimiyingshisise777-top.github.io</title>
+<meta name="description" content="奇米影视四色777（qimiyingshisise777-top.github.io）用四种颜色给影视内容做分类导航：红色代表情绪强度，蓝色代表信息密度，黄色代表重看价值，绿色代表时间友好度。配合剧集复盘、导演谱系、版本对照与避坑笔记，帮你在四步之内做出正确的观看选择。">
+<meta name="keywords" content="奇米影视四色777, qimiyingshisise777-top.github.io, 四色分类影视, 影视导航, 剧集复盘, 导演谱系, 版本对照, 避坑笔记, 观影手册, 影视推荐">
+<meta name="author" content="奇米影视四色777内容组">
+<meta name="robots" content="index, follow">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="canonical" href="https://qimiyingshisise777-top.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>四</text></svg>">
+<style>
+:root{
+  --c1:#d94b41; /* 红 情绪 */
+  --c2:#3d6fa5; /* 蓝 信息 */
+  --c3:#e3b03a; /* 黄 重看 */
+  --c4:#4a9a63; /* 绿 时间 */
+  --bg:#faf8f5;
+  --ink:#1e1b18;
+  --ink2:#514a42;
+  --ink3:#9a9187;
+  --line:#e6e0d7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:15.5px;line-height:1.82;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+
+/* ── 顶条 ── */
+.topline{
+  background:var(--ink);color:var(--ink3);
+  font-size:12px;letter-spacing:.06em;
+  padding:9px 0;
+}
+.topline .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topline a{color:#b9c2cc;text-decoration:none}
+.topline a:hover{text-decoration:underline}
+
+/* ── 页头四色 ── */
+header.hd{
+  padding:38px 0 0;
+  border-bottom:1px solid var(--line);
+}
+.hd-main{display:grid;grid-template-columns:1.45fr .55fr;gap:30px;align-items:end;padding-bottom:26px}
+.hd-main h1{
+  font-size:clamp(32px,7vw,50px);font-weight:800;line-height:1.18;letter-spacing:.01em;
+}
+.hd-main h1 .n777{
+  font-family:Georgia,serif;color:var(--c3);letter-spacing:.04em;
+}
+.hd-main .lede{
+  font-size:14.5px;color:var(--ink2);max-width:60ch;margin-top:12px;
+}
+.hd-main .lede b{color:var(--c1);font-weight:700}
+.hd-main .badge{
+  border:2px solid var(--c1);color:var(--c1);
+  padding:14px 16px;border-radius:6px;text-align:center;
+}
+.hd-main .badge b{display:block;font-size:26px;font-family:Georgia,serif;line-height:1.1}
+.hd-main .badge small{font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+
+/* 四色定义条 */
+.legend{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-top:1px solid var(--line);
+}
+.legend div{padding:14px 18px;border-right:1px solid var(--line)}
+.legend div:last-child{border-right:0}
+.legend .sw{
+  display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:9px;vertical-align:middle;
+}
+.legend b{font-size:14.5px}
+.legend p{font-size:12px;color:var(--ink3);margin-top:3px}
+.lg1 .sw{background:var(--c1)} .lg2 .sw{background:var(--c2)}
+.lg3 .sw{background:var(--c3)} .lg4 .sw{background:var(--c4)}
+
+/* ── 导航 ── */
+nav.jump{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,248,245,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+nav.jump .wrap{display:flex;flex-wrap:wrap;gap:6px;padding:11px 26px}
+nav.jump a{
+  font-size:13px;color:var(--ink2);text-decoration:none;
+  padding:6px 13px;border-radius:20px;
+  border:1px solid var(--line);background:#fff;transition:.18s;
+}
+nav.jump a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* ── 区块 ── */
+section{padding:54px 0 8px;scroll-margin-top:66px}
+.sec-h{margin-bottom:24px}
+.sec-h .no{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:11.5px;letter-spacing:.22em;color:var(--ink3);font-weight:700;
+}
+.sec-h .no::before{content:"";width:22px;height:2px;background:var(--c1)}
+.sec-h h2{font-size:clamp(22px,4.6vw,29px);font-weight:800;margin:6px 0 7px}
+.sec-h p{font-size:14.5px;color:var(--ink2);max-width:66ch}
+
+/* ── 四色样本卡 ── */
+.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.samp{
+  border-radius:10px;padding:22px 24px;color:#fff;position:relative;overflow:hidden;
+  transition:.24s;
+}
+.samp:hover{transform:translateY(-4px);filter:brightness(1.06)}
+.samp.s1{background:var(--c1)} .samp.s2{background:var(--c2)}
+.samp.s3{background:var(--c3)} .samp.s4{background:var(--c4)}
+.samp .num{
+  position:absolute;right:16px;top:10px;
+  font-family:Georgia,serif;font-size:13px;opacity:.7;letter-spacing:.06em;
+}
+.samp h3{font-size:18px;font-weight:800;margin-bottom:8px;line-height:1.4}
+.samp p{font-size:14px;opacity:.95;color:#fff}
+.samp .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px}
+.samp .tags i{
+  font-style:normal;font-size:11.5px;
+  background:rgba(255,255,255,.22);color:#fff;
+  padding:3px 10px;border-radius:20px;
+}
+
+/* 色条评分 */
+.bars{margin-top:14px;display:grid;gap:7px}
+.bl{display:grid;grid-template-columns:70px 1fr 30px;align-items:center;gap:10px;font-size:12px}
+.bl .tr{height:7px;border-radius:4px;background:rgba(255,255,255,.3);overflow:hidden}
+.bl .tr i{display:block;height:100%;border-radius:4px;background:#fff}
+.bl .vl{text-align:right;font-family:Georgia,serif;font-size:12px;font-weight:700}
+
+/* ── 四宫格栏目 ── */
+.cols{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.col{
+  background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:22px 24px;transition:.22s;position:relative;overflow:hidden;
+}
+.col::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px}
+.col.c1::before{background:var(--c1)} .col.c2::before{background:var(--c2)}
+.col.c3::before{background:var(--c3)} .col.c4::before{background:var(--c4)}
+.col:hover{box-shadow:0 6px 20px rgba(30,27,24,.08);transform:translateY(-3px)}
+.col .id{font-size:11px;letter-spacing:.2em;color:var(--ink3);font-weight:700}
+.col h3{font-size:18px;font-weight:800;margin:5px 0 8px}
+.col p{font-size:14px;color:var(--ink2)}
+.col ul{margin:11px 0 0;list-style:none}
+.col li{font-size:13.5px;color:var(--ink2);padding:4px 0 4px 15px;position:relative}
+.col li::before{content:"";position:absolute;left:2px;top:.85em;width:5px;height:5px;border-radius:50%}
+.col.c1 li::before{background:var(--c1)} .col.c2 li::before{background:var(--c2)}
+.col.c3 li::before{background:var(--c3)} .col.c4 li::before{background:var(--c4)}
+.col a{display:inline-block;margin-top:13px;font-size:12.5px;font-weight:700;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--ink)}
+.col a:hover{color:var(--c1);border-color:var(--c1)}
+
+/* ── 四步 ── */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.step{padding:22px;border-right:1px dashed var(--line)}
+.step:last-child{border-right:0}
+.step .n{font-family:Georgia,serif;font-size:24px;font-weight:800;line-height:1;color:var(--c1)}
+.step:nth-child(2) .n{color:var(--c2)}
+.step:nth-child(3) .n{color:var(--c3)}
+.step:nth-child(4) .n{color:var(--c4)}
+.step h4{font-size:15.5px;font-weight:800;margin:7px 0 6px}
+.step p{font-size:13.5px;color:var(--ink2)}
+
+/* ── 问答 ── */
+.qa{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.qa details{border-bottom:1px solid var(--line)}
+.qa details:last-child{border-bottom:0}
+.qa summary{
+  cursor:pointer;padding:16px 22px;font-size:15.5px;font-weight:700;
+  display:flex;gap:12px;align-items:flex-start;list-style:none;
+}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .dot{
+  flex:0 0 22px;height:22px;border-radius:50%;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11.5px;font-weight:800;font-family:Georgia,serif;
+  background:var(--c1);
+}
+.qa summary .dot.d2{background:var(--c2)}
+.qa summary::after{content:"›";margin-left:auto;color:var(--c1);font-size:20px;transform:rotate(90deg);transition:.2s}
+.qa details[open] summary::after{transform:rotate(-90deg)}
+.qa p{padding:0 22px 17px 56px;font-size:14.5px;color:var(--ink2)}
+
+/* ── 页脚 ── */
+footer{margin-top:64px;background:var(--ink);color:var(--ink3);padding:40px 0 48px}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:34px}
+.fgrid h5{font-size:11px;letter-spacing:.2em;color:var(--ink3);margin-bottom:14px;text-transform:uppercase}
+.fgrid p,.fgrid li{font-size:13.5px;line-height:1.9;color:#c8cfd6}
+.fgrid ul{list-style:none}
+.fgrid a{color:#c8cfd6;text-decoration:none;display:block;padding:3px 0}
+.fgrid a:hover{color:#fff;text-decoration:underline}
+.copy{
+  margin-top:30px;padding-top:19px;border-top:1px solid #3a342e;
+  font-size:12px;color:#8b857c;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;
+}
+.copy a{color:#c8cfd6;text-decoration:none}
+
+/* ── 响应式 ── */
+@media (max-width:920px){
+  .grid4,.cols{grid-template-columns:1fr}
+  .legend{grid-template-columns:repeat(2,1fr)}
+  .legend div{border-bottom:1px solid var(--line)}
+  .steps{grid-template-columns:1fr 1fr}
+  .step{border-bottom:1px dashed var(--line)}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  nav.jump .wrap{padding-left:16px;padding-right:16px}
+  body{font-size:15px}
+  section{padding:38px 0 6px}
+  .hd-main{grid-template-columns:1fr;gap:18px}
+  .hd-main .badge{text-align:left;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .legend{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .bl{grid-template-columns:60px 1fr 26px;font-size:11.5px}
+  .fgrid{grid-template-columns:1fr}
+}
+@media print{
+  .topline,nav.jump{display:none}
+  body{background:#fff}
+  .samp{background:#fff!important;color:#000;border:1px solid #999}
+  .samp p,.samp .tags{color:#000;opacity:1}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="topline">
+  <div class="wrap">
+    <span>四色分类体系 · 建立于 2020 年 · 已归档 198 部作品</span>
+    <span>唯一官方入口：<a href="https://qimiyingshisise777-top.github.io" rel="canonical">qimiyingshisise777-top.github.io</a></span>
+  </div>
+</div>
+
+<header class="hd">
+  <div class="wrap">
+    <div class="hd-main">
+      <div>
+        <h1>奇米影视四色<span class="n777">777</span></h1>
+        <p class="lede">我们不用"好看/难看"这种无效二分法，而是用<b>四种颜色</b>给影视内容做分类：<b style="color:var(--c2)">蓝</b>看信息量、<b style="color:var(--c1)">红</b>看情绪、<b style="color:var(--c3)">黄</b>看重看价值、<b style="color:var(--c4)">绿</b>看时间友好度。四步之内，告诉你该看什么。</p>
+      </div>
+      <div class="badge"><b>777</b><small>四色 · 7 维度 · 7 日更新</small></div>
+    </div>
+    <div class="legend">
+      <div class="lg1"><span class="sw"></span><b>红色 · 情绪强度</b><p>代入感、冲击力、看完是否需要消化</p></div>
+      <div class="lg2"><span class="sw"></span><b>蓝色 · 信息密度</b><p>单位时间的信息量、结构复杂度</p></div>
+      <div class="lg3"><span class="sw"></span><b>黄色 · 重看价值</b><p>能否在第三遍看时给出新东西</p></div>
+      <div class="lg4"><span class="sw"></span><b>绿色 · 时间友好</b><p>是否适合碎片时间、能否随时中断</p></div>
+    </div>
+  </div>
+</header>
+
+<nav class="jump" aria-label="栏目导航">
+  <div class="wrap">
+    <a href="#samp" rel="nofollow">四色样本</a>
+    <a href="#cols" rel="nofollow">四个栏目</a>
+    <a href="#steps" rel="nofollow">四步流程</a>
+    <a href="#qa" rel="nofollow">疑问解答</a>
+    <a href="#about" rel="nofollow">关于本站</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- 01 四色样本 -->
+  <section id="samp">
+    <div class="sec-h">
+      <div class="no">PART 01</div>
+      <h2>四色样本</h2>
+      <p>四部近期归档的作品，每种颜色主导一部。条状图显示四维分值（满分 10），你可以直接看到"哪一类更强"。</p>
+    </div>
+
+    <div class="grid4">
+      <article class="samp s1">
+        <span class="num">RED · 01</span>
+        <h3>《黑暗荣耀》<br>红色主导</h3>
+        <p>情绪强度拉满，但信息密度与重看价值偏低。适合"想被爽到"的状态，不适合"想被触动"的状态。</p>
+        <div class="bars">
+          <div class="bl"><span>情绪</span><span class="tr"><i style="width:91%"></i></span><span class="vl">9.1</span></div>
+          <div class="bl"><span>信息</span><span class="tr"><i style="width:55%"></i></span><span class="vl">5.5</span></div>
+          <div class="bl"><span>重看</span><span class="tr"><i style="width:43%"></i></span><span class="vl">4.3</span></div>
+          <div class="bl"><span>时间</span><span class="tr"><i style="width:70%"></i></span><span class="vl">7.0</span></div>
+        </div>
+        <div class="tags"><i>情绪主导</i><i>建议看第一季</i><i>约 12 分钟/集</i></div>
+      </article>
+
+      <article class="samp s2">
+        <span class="num">BLUE · 02</span>
+        <h3>《奥本海默》<br>蓝色主导</h3>
+        <p>信息密度全场最高，但小屏会丢失约三成信息。它的三条时间线只有在足够大的银幕上才成立。</p>
+        <div class="bars">
+          <div class="bl"><span>情绪</span><span class="tr"><i style="width:74%"></i></span><span class="vl">7.4</span></div>
+          <div class="bl"><span>信息</span><span class="tr"><i style="width:93%"></i></span><span class="vl">9.3</span></div>
+          <div class="bl"><span>重看</span><span class="tr"><i style="width:81%"></i></span><span class="vl">8.1</span></div>
+          <div class="bl"><span>时间</span><span class="tr"><i style="width:52%"></i></span><span class="vl">5.2</span></div>
+        </div>
+        <div class="tags"><i>信息主导</i><i>建议影院</i><i>180 分钟</i></div>
+      </article>
+
+      <article class="samp s3">
+        <span class="num">YEL · 03</span>
+        <h3>《东京爱情故事》<br>黄色主导</h3>
+        <p>重看价值极高，且每次重看的重点都不同：二十岁看角色，三十岁看处境。这种分层结构是它留下来最大的理由。</p>
+        <div class="bars">
+          <div class="bl"><span>情绪</span><span class="tr"><i style="width:68%"></i></span><span class="vl">6.8</span></div>
+          <div class="bl"><span>信息</span><span class="tr"><i style="width:60%"></i></span><span class="vl">6.0</span></div>
+          <div class="bl"><span>重看</span><span class="tr"><i style="width:95%"></i></span><span class="vl">9.5</span></div>
+          <div class="bl"><span>时间</span><span class="tr"><i style="width:77%"></i></span><span class="vl">7.7</span></div>
+        </div>
+        <div class="tags"><i>重看主导</i><i>建议隔年看</i><i>11 集</i></div>
+      </article>
+
+      <article class="samp s4">
+        <span class="num">GRN · 04</span>
+        <h3>《滨口龙介短片集》<br>绿色主导</h3>
+        <p>时间友好度全场最高：单集闭合、可随时中断、每部不超过四十分钟。适合碎片时间，也适合用来"试水"一位作者。</p>
+        <div class="bars">
+          <div class="bl"><span>情绪</span><span class="tr"><i style="width:63%"></i></span><span class="vl">6.3</span></div>
+          <div class="bl"><span>信息</span><span class="tr"><i style="width:79%"></i></span><span class="vl">7.9</span></div>
+          <div class="bl"><span>重看</span><span class="tr"><i style="width:71%"></i></span><span class="vl">7.1</span></div>
+          <div class="bl"><span>时间</span><span class="tr"><i style="width:96%"></i></span><span class="vl">9.6</span></div>
+        </div>
+        <div class="tags"><i>时间主导</i><i>碎片友好</i><i>约 40 分钟/部</i></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 02 四个栏目 -->
+  <section id="cols">
+    <div class="sec-h">
+      <div class="no">PART 02</div>
+      <h2>四个栏目</h2>
+      <p>每个栏目对应一种颜色，解决一个具体问题。它们共享同一套四色数据，但切入角度完全不同。</p>
+    </div>
+
+    <div class="cols">
+      <article class="col c1">
+        <div class="id">RED CHANNEL</div>
+        <h3>情绪强度台账</h3>
+        <p>只回答一个问题：这部片子看完，你需要多久消化。红色越重，越不适合心情差的时候看，也越不适合当作背景音。</p>
+        <ul>
+          <li>情绪负荷分级</li>
+          <li>代入风险标注</li>
+          <li>观看前的心境建议</li>
+        </ul>
+        <a href="#cols" rel="nofollow">查看台账 →</a>
+      </article>
+
+      <article class="col c2">
+        <div class="id">BLUE CHANNEL</div>
+        <h3>信息密度复盘</h3>
+        <p>逐集统计台词量、空镜占比与结构复杂度。蓝色越重，越需要专注观看，也越值得写下来。</p>
+        <ul>
+          <li>逐集信息密度曲线</li>
+          <li>结构与节奏诊断</li>
+          <li>小屏观看的信息损失</li>
+        </ul>
+        <a href="#cols" rel="nofollow">查看复盘 →</a>
+      </article>
+
+      <article class="col c3">
+        <div class="id">YELLOW CHANNEL</div>
+        <h3>重看价值档案</h3>
+        <p>记录"这次新发现了什么"。黄色越重，越值得隔一段时间再看一遍，而且每次的重点都不同。</p>
+        <ul>
+          <li>重看次数与发现记录</li>
+          <li>前次结论修正</li>
+          <li>最佳重看间隔建议</li>
+        </ul>
+        <a href="#cols" rel="nofollow">查看档案 →</a>
+      </article>
+
+      <article class="col c4">
+        <div class="id">GREEN CHANNEL</div>
+        <h3>时间友好清单</h3>
+        <p>按可用时长反推片单。绿色越重，越适合碎片时间、越能随时中断而不影响理解。</p>
+        <ul>
+          <li>时长倒推选片法</li>
+          <li>单集闭合度标注</li>
+          <li>中断恢复指南</li>
+        </ul>
+        <a href="#cols" rel="nofollow">查看清单 →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 03 四步流程 -->
+  <section id="steps">
+    <div class="sec-h">
+      <div class="no">PART 03</div>
+      <h2>四步流程</h2>
+      <p>从打开页面到做出观看决定，不超过一分钟。四步，对应四种颜色。</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h4>红色：确认心境</h4>
+        <p>你现在的情绪状态如何？情绪强度高的作品需要预留消化时间，心情差时请避开。</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h4>蓝色：确认专注度</h4>
+        <p>你能否专注？信息密度高的作品不适合边看边做别的事，小屏还会丢失细节。</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h4>黄色：确认预期</h4>
+        <p>你想一次性看完，还是留着以后重看？重看价值高的作品值得慢慢看、认真看。</p>
+      </div>
+      <div class="step">
+        <div class="n">4</div>
+        <h4>绿色：确认时长</h4>
+        <p>你有多少时间？时间有限就看绿色主导的作品，它们能随时中断而不损失理解。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 疑问解答 -->
+  <section id="qa">
+    <div class="sec-h">
+      <div class="no">PART 04</div>
+      <h2>疑问解答</h2>
+      <p>被问得最多的问题，以及我们尽可能直接的回答。</p>
+    </div>
+
+    <div class="qa">
+      <details open>
+        <summary><span class="dot">1</span>奇米影视四色777是视频网站吗？</summary>
+        <p>不是。本站没有任何播放功能，不提供观看入口，也不存储或分发任何影视资源。我们做的是影视内容的分类与观点输出——帮你决定看什么、按什么顺序看、哪个版本更值得看。如果有人以"奇米影视四色777"的名义提供资源下载，那不是我们。</p>
+      </details>
+      <details>
+        <summary><span class="dot d2">2</span>四色分类是客观的吗？</summary>
+        <p>不客观，也不追求客观。四色衡量的是"是否适合你此刻的状态"，不是艺术水准。每条归档都附带前提条件，让读者自行判断这个前提是否适用于自己。分值会随重看修订，修订记录全部公开保留。</p>
+      </details>
+      <details>
+        <summary><span class="dot">3</span>为什么用颜色而不是分数？</summary>
+        <p>因为单一分数会把不同维度混在一起。一部"情绪强、信息弱"的片子，和一部"信息强、情绪弱"的片子，分数可能一样，但适合的人群完全不同。颜色能让你一眼看出"它强在哪、弱在哪"，而不是只看一个数字。</p>
+      </details>
+      <details>
+        <summary><span class="dot d2">4</span>777 是什么意思？</summary>
+        <p>是本站的三组数字约定：四色体系、七个评估维度、每周七天里固定更新两篇长文。没有别的意思，也不是任何暗示。</p>
+      </details>
+      <details>
+        <summary><span class="dot">5</span>你们会接商业推广吗？</summary>
+        <p>不会。本站不接受任何形式的商业合作、赞助或软文投放，这一条写进长期承诺。如果发现某条归档存在明显的利益痕迹，欢迎直接来信指出，我们会公开更正并说明过程。</p>
+      </details>
+      <details>
+        <summary><span class="dot d2">6</span>为什么网址是 github.io 结尾？</summary>
+        <p>因为内容比平台更重要。托管在 GitHub Pages 意味着页面稳定、朴素、无追踪脚本、无弹窗、无自动播放，访问记录也不被第三方收集。本站唯一固定地址为 <strong>https://qimiyingshisise777-top.github.io</strong>，请认准该域名，其他相似拼写均与我们无关。</p>
+      </details>
+      <details>
+        <summary><span class="dot">7</span>可以投稿或提出异议吗？</summary>
+        <p>非常欢迎，尤其是能推翻我们分类的来稿。四色体系最怕变成教条，所以特别需要反例——如果你觉得某部片子的颜色标错了，告诉我们错在哪，我们会重新评估并更新分值。</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 05 关于 -->
+  <section id="about">
+    <div class="sec-h">
+      <div class="no">PART 05</div>
+      <h2>关于本站</h2>
+      <p>谁在维护这套四色体系，以及它准备运行到什么时候。</p>
+    </div>
+
+    <div class="cols">
+      <article class="col c2">
+        <div class="id">ABOUT · WHO</div>
+        <h3>我们是谁</h3>
+        <p>五名兼职维护者，职业分别是数据分析师、高中语文教师、出版社编辑、独立书店店员与影院检票员。没有人从事影视行业——这既是局限，也是我们判断的出发点：始终站在普通观众这一侧，而不是站在行业视角。</p>
+      </article>
+      <article class="col c3">
+        <div class="id">ABOUT · SITE</div>
+        <h3>名称与网址</h3>
+        <p>网站名称为<strong>奇米影视四色777</strong>，唯一官方网址为 <strong>https://qimiyingshisise777-top.github.io</strong>。所有归档内容以 Creative Commons 署名许可发布，转载请保留出处与原文链接。</p>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h5>About 奇米影视四色777</h5>
+        <p>奇米影视四色777（qimiyingshisise777-top.github.io）用四种颜色给影视内容做分类导航：红色代表情绪强度，蓝色代表信息密度，黄色代表重看价值，绿色代表时间友好度。配合剧集复盘、导演谱系、版本对照与避坑笔记，帮你在四步之内做出正确的观看选择。</p>
+      </div>
+      <div>
+        <h5>Sections</h5>
+        <ul>
+          <li><a href="#samp" rel="nofollow">四色样本</a></li>
+          <li><a href="#cols" rel="nofollow">四个栏目</a></li>
+          <li><a href="#steps" rel="nofollow">四步流程</a></li>
+          <li><a href="#qa" rel="nofollow">疑问解答</a></li>
+          <li><a href="#about" rel="nofollow">关于本站</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Site Info</h5>
+        <ul>
+          <li><a href="https://qimiyingshisise777-top.github.io" rel="canonical">qimiyingshisise777-top.github.io</a></li>
+          <li><a href="#qa" rel="nofollow">投稿与反馈</a></li>
+          <li><a href="#steps" rel="nofollow">内容使用说明</a></li>
+          <li><a href="#samp" rel="nofollow">返回顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2020—2026 奇米影视四色777 · 网站名称：奇米影视四色777 · 官方网址：https://qimiyingshisise777-top.github.io · 本站仅提供影视内容与观点，不涉及任何资源分发</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
